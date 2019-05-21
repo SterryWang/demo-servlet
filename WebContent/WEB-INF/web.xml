@@ -9,15 +9,15 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <!-- <servlet>  
-     类名  
+  <servlet>  
+       
     <servlet-name>HelloServlet</servlet-name>  
-    所在的包  
+   
     <servlet-class>com.demo.servlet.test.HelloServlet</servlet-class>  
   </servlet>  
   <servlet-mapping>  
     <servlet-name>HelloServlet</servlet-name>  
-    访问的网址  
+    
     <url-pattern>/TomcatTest/HelloServlet2</url-pattern>  
-    </servlet-mapping>   -->
+    </servlet-mapping>  
 </web-app>
