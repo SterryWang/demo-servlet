@@ -1,6 +1,8 @@
 package com.demo.servlet.test;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,8 +30,18 @@ public class HelloServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		 // 使用 GBK 设置中文正常显示
+		response.setContentType("text/html");
         response.setCharacterEncoding("GBK");
-        response.getWriter().write("菜鸟教程：http://www.runoob.com");
+        
+        PrintWriter out =response.getWriter();
+        out.println("<HTML>");
+        out.println("<HEAD><TITLE>servlet实例</TITLE></HEAD>");
+        out.println("<BODY>  servlet details</BODY>");
+        out.println("</HTML>");
+       
+        out.flush();
+        out.close();
+     // response.getWriter().write("菜鸟教程：http://www.runoob.com");
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 

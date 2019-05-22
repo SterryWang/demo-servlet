@@ -9,7 +9,7 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <!-- hhh<servlet>  
+  <!-- <servlet>  
        
     <servlet-name>HelloServlet</servlet-name>  
    
