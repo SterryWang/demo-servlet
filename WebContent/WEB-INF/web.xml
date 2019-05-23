@@ -34,4 +34,16 @@
     
     <url-pattern>/TomcatTest/HelloServlet2</url-pattern>  
     </servlet-mapping>   -->
+    <filter>
+       <filter-name>CountFilter</filter-name>
+       <filter-class>com.demo.filter.test.CountFilter</filter-class>
+       <init-param>
+       <param-name>count</param-name>
+       <param-value>5000</param-value>
+       </init-param>
+    </filter>
+    <filter-mapping>
+    <filter-name>CountFilter</filter-name>
+    <url-pattern>/CountServlet</url-pattern>
+    </filter-mapping>
 </web-app>
