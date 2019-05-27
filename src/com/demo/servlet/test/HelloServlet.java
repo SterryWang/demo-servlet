@@ -29,19 +29,19 @@ public class HelloServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		 // Ê¹ÓÃ GBK ÉèÖÃÖĞÎÄÕı³£ÏÔÊ¾
-		response.setContentType("text/html");
-        response.setCharacterEncoding("GBK");
-        
+		 // Ê¹ï¿½ï¿½ GBK ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾
+		//response.setContentType("text/html");
+       // response.setCharacterEncoding("GBK");
+        System.out.println("å¤„ç†getè¯·æ±‚ï¼Œå¹¶å°è£…è¿”å›ä¿¡æ¯");
         PrintWriter out =response.getWriter();
         out.println("<HTML>");
-        out.println("<HEAD><TITLE>servletÊµÀı</TITLE></HEAD>");
+        out.println("<HEAD><TITLE>servletèœé¸Ÿå®ä¾‹222333333</TITLE></HEAD>");
         out.println("<BODY>  servlet details</BODY>");
         out.println("</HTML>");
        
         out.flush();
         out.close();
-     // response.getWriter().write("²ËÄñ½Ì³Ì£ºhttp://www.runoob.com");
+     // response.getWriter().write("ï¿½ï¿½ï¿½ï¿½Ì³Ì£ï¿½http://www.runoob.com");
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 

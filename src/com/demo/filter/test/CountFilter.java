@@ -15,6 +15,7 @@ import javax.servlet.annotation.WebInitParam;
 import jdk.nashorn.internal.runtime.regexp.joni.Config;
 
 /**
+ * è®¿é—®æ¬¡æ•°è®¡æ•°çš„è¿‡æ»¤å™¨ï¼Œæ”¯æŒæ³¨è§£æˆ–è€…web.xmlä¸¤ç§æ³¨å†Œæ–¹å¼
  * Servlet Filter implementation class CountFilter
  */
 //@WebFilter(urlPatterns= {"/CountServlet"},initParams= {@WebInitParam(name="count",value="1000")})
@@ -40,12 +41,12 @@ public class CountFilter implements Filter {
 
 	/**
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
-	 * Ã¿´ÎÀ¹½Øµ½·ÃÎÊĞèÇóºó£¬¶¼¸ø±äÁ¿count¼Ó1
+	 * Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó£¬¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½countï¿½ï¿½1
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		// TODO Auto-generated method stub
 		// place your code here
-    //Í¨¹ıwebÈİÆ÷ÉÏÏÂÎÄ£¬¹²Ïí±äÁ¿"count"µÄµ±Ç°Öµ,ÊµÏÖºÍCountServletÖ®¼äµÄÊı¾İ¹²Ïí
+    //Í¨ï¿½ï¿½webï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"count"ï¿½Äµï¿½Ç°Öµ,Êµï¿½Öºï¿½CountServletÖ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ¹ï¿½ï¿½ï¿½
 		ServletContext sc  =fc.getServletContext();
 		sc.setAttribute("count", ++count);
 		// pass the request along the filter chain
