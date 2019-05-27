@@ -15,7 +15,7 @@ import javax.servlet.annotation.WebInitParam;
  * UTF-8模式或者其他模式（也可以通过web.xml设置成其他的编码格式）
  * Servlet Filter implementation class CharacterFilter
  */
-@WebFilter(urlPatterns= {"/*"},initParams= {@WebInitParam(name = "encoding", value = "UTF-8")})
+//@WebFilter(urlPatterns= {"/*"},initParams= {@WebInitParam(name = "encoding", value = "UTF-8")})
 public class CharacterFilter implements Filter {
 	private String encoding;
 
@@ -54,7 +54,7 @@ public class CharacterFilter implements Filter {
 		}
 
 		// pass the request along the filter chain
-		System.out.println("请求拦截过滤完毕，交给servlet正式处理请求");
+		System.out.println("请求拦截过滤完毕，交给后续的filter或者servlet继续处理请求");
 		chain.doFilter(request, response);
 		//拦截返回体，再执行一次过滤操作
 		System.out.println("已执行了返回信息的拦截"+response.getCharacterEncoding());

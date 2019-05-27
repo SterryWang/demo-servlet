@@ -1,39 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
-  <display-name>demo-servlet</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
-  <!-- 编码格式过滤器 -->
- <!--  <filter>
-  <filter-name>CharacterFilter</filter-name>
-  <filter-class>com.demo.filter.test.CharacterFilter</filter-class>
-  <init-param>
-  <param-name>encoding</param-name>
-  <param-value>GBK</param-value>
-  </init-param>
-  </filter>
-  <filter-mapping>
-  <filter-name>CharacterFilter</filter-name>
-  <url-pattern>/*</url-pattern>
-  </filter-mapping> -->
-  
-  <!--访问计数过滤器  -->
-  <filter>
-    <filter-name>CountFilter</filter-name>
-    <filter-class>com.demo.filter.test.CountFilter</filter-class>
-    <init-param>
-      <param-name>count</param-name>
-      <param-value>5000</param-value>
-    </init-param>
-  </filter>
-  <filter-mapping>
-    <filter-name>CountFilter</filter-name>
-    <url-pattern>/CountServlet</url-pattern>
-  </filter-mapping>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>demo-servlet</display-name>
+
+	<!-- ==================== Default Welcome File List ===================== -->
+	<!-- When a request URI refers to a directory, the default servlet looks -->
+	<!-- for a "welcome file" within that directory and, if present, to the -->
+	<!-- corresponding resource URI for display. -->
+	<!-- If no welcome files are present, the default servlet either serves 
+		a -->
+	<!-- directory listing (see default servlet configuration on how to -->
+	<!-- customize) or returns a 404 status, depending on the value of the -->
+	<!-- listings setting. -->
+	<!-- -->
+	<!-- If you define welcome files in your own application's web.xml -->
+	<!-- deployment descriptor, that list *replaces* the list configured -->
+	<!-- here, so be sure to include any of the default values that you wish -->
+	<!-- to use within your application. -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- 编码格式过滤器 -->
+	<filter>
+		<filter-name>CharacterFilter</filter-name>
+		<filter-class>com.demo.filter.test.CharacterFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>GBK</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<!-- 测试过滤器链 -->
+	<filter>
+		<filter-name>FirstFilter</filter-name>
+		<filter-class>com.demo.filter.test.FirstFilter</filter-class>
+
+	</filter>
+	<filter-mapping>
+		<filter-name>FirstFilter</filter-name>
+		<url-pattern>/HelloServlet</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>SecondFilter</filter-name>
+		<filter-class>com.demo.filter.test.SecondFilter</filter-class>
+
+	</filter>
+	<filter-mapping>
+		<filter-name>SecondFilter</filter-name>
+		<url-pattern>/HelloServlet</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>CountFilter</filter-name>
+		<filter-class>com.demo.filter.test.CountFilter</filter-class>
+		<init-param>
+			<param-name>count</param-name>
+			<param-value>5000</param-value>
+		</init-param>
+	</filter>
 </web-app>
