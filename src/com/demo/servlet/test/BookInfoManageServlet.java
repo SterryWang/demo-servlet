@@ -1,6 +1,7 @@
 package com.demo.servlet.test;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -52,7 +53,17 @@ public class BookInfoManageServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		PrintWriter  out=  response.getWriter();
+		out.print("<h2>图书信息添加成功<h2><br>");
+		out.print("图书编号："+request.getParameter("id")+"<br>");
+		out.print("图书名称："+request.getParameter("name")+"<br>");
+		out.print("图书作者："+request.getParameter("author")+"<br>");
+		out.print("价格："+request.getParameter("price")+"<br>");
+		out.print("邮箱："+request.getParameter("email")+"<br>");
+		out.print("网址："+request.getParameter("url")+"<br>");
+		out.flush();
+		out.close();
+		//doGet(request, response);
 	}
 
 }

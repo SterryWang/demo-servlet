@@ -31,10 +31,10 @@ public class CounterServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		response.setContentType("text/html");
-        response.setCharacterEncoding("GBK");
+        //response.setCharacterEncoding("GBK");
         
         ServletContext sc =getServletContext();
-        response.getWriter().write("±¾Õ¾ÀÛ¼Æ·ÃÎÊ´ÎÊýÎª£º"+sc.getAttribute("count")+"´Î");
+        response.getWriter().write("æ­¤é¡µè®¿é—®æ¬¡æ•°å·²è¾¾ï¼š"+sc.getAttribute("count"));
 	}
 
 	/**
