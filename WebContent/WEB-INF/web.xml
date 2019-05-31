@@ -28,6 +28,11 @@
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 
+
+	<!-- <servlet> <servlet-name>HelloServlet</servlet-name> <servlet-class>com.demo.servlet.test.HelloServlet</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>HelloServlet</servlet-name> <url-pattern>/TomcatTest/HelloServlet2</url-pattern> 
+		</servlet-mapping> -->
+
 	<!-- 编码格式过滤器 -->
 	<filter>
 		<filter-name>CharacterFilter</filter-name>
