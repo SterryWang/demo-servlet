@@ -14,3 +14,6 @@ basic training on how to build a servlet container
    3)客户端关闭浏览器并重新启动浏览器，继续访问原服务地址，服务端会生成全新的session(验证条件为：依然在session有效期内)
    4)同一个客户端，换一个浏览器访问相同的服务端地址，服务端会生成全新的session
    以上在我们的案例中全部得到了验证。
+
+测试下从本地提交到github
+
